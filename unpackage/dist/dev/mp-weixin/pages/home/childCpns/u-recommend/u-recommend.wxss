@@ -1,0 +1,21 @@
+.recommend {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+          justify-content: space-evenly;
+  padding: 25rpx 0;
+  border-bottom: 20rpx #eee solid;
+}
+.recommend .recommend-item {
+  width: 23%;
+  text-align: center;
+  color: #666;
+  font-size: 30rpx;
+}
+.recommend .recommend-item image {
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "首 页",
+  "enablePullDownRefresh": false,
+  "onReachBottomDistance": 100,
+  "usingComponents": {
+    "u-swiper": "/components/u-swiper/u-swiper",
+    "u-tab-control": "/components/u-tab-control/u-tab-control",
+    "u-goods": "/components/u-goods/u-goods",
+    "u-back-top": "/components/u-back-top/u-back-top",
+    "u-recommend": "/pages/home/childCpns/u-recommend/u-recommend"
+  }
+}

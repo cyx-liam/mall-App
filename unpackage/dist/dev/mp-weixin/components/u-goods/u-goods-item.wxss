@@ -1,0 +1,39 @@
+.goodsItem {
+  width: 100%;
+  position: relative;
+  padding-bottom: 80rpx;
+}
+.goodsItem .showImg {
+  width: 100%;
+  border-radius: 8rpx;
+}
+.goodsItem .desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.goodsItem .desc .title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 30rpx;
+  color: #333;
+}
+.goodsItem .desc .info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 28rpx;
+}
+.goodsItem .desc .info .price {
+  color: #ff5777;
+  margin-right: 10rpx;
+}
+.goodsItem .desc .info .cfav image {
+  width: 30rpx;
+}
+

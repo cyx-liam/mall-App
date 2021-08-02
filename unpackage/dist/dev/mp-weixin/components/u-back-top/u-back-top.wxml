@@ -1,0 +1,1 @@
+<image class="back-top" src="../../static/image/common/top.png" mode="widthFix" data-event-opts="{{[['tap',[['backTop',['$event']]]]]}}" bindtap="__e"></image>
