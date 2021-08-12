@@ -1,0 +1,32 @@
+.detailInfo.data-v-304b2aac {
+  color: #6f6f6f;
+  font-size: 34rpx;
+  padding-top: 50rpx;
+  border-bottom: 6px solid #f3f3f3;
+}
+.detailInfo .desc.data-v-304b2aac {
+  padding: 0 30rpx;
+}
+.detailInfo .desc .start-line.data-v-304b2aac {
+  height: 10rpx;
+  width: 200rpx;
+  border-left: 11rpx solid #000;
+  border-top: 1rpx solid #000;
+}
+.detailInfo .desc .end-line.data-v-304b2aac {
+  float: right;
+  height: 10rpx;
+  width: 200rpx;
+  border-right: 11rpx solid #000;
+  border-bottom: 1rpx solid #000;
+}
+.detailInfo .desc .descContent.data-v-304b2aac {
+  padding: 30rpx 0;
+}
+.detailInfo .detailImage .key.data-v-304b2aac {
+  padding: 30rpx;
+}
+.detailInfo image.data-v-304b2aac {
+  width: 100%;
+}
+

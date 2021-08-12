@@ -1,5 +1,17 @@
 {
-  "navigationBarTitleText": "详细页",
+  "navigationBarTitleText": "商 品 详 情",
+  "navigationBarBackgroundColor": "#ff5777",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "u-swiper": "/components/u-swiper/u-swiper",
+    "u-goods": "/components/u-goods/u-goods",
+    "u-status-bar": "/pages/detail/childCpns/u-status-bar",
+    "u-base-info": "/pages/detail/childCpns/u-base-info",
+    "u-shop-info": "/pages/detail/childCpns/u-shop-info",
+    "u-detail-info": "/pages/detail/childCpns/u-detail-info",
+    "u-param-info": "/pages/detail/childCpns/u-param-info",
+    "u-comment-info": "/pages/detail/childCpns/u-comment-info",
+    "goods-nav": "/uni_modules/uni-goods-nav/components/uni-goods-nav/uni-goods-nav"
+  }
 }

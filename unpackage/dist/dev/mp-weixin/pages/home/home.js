@@ -103,16 +103,16 @@ var components
 try {
   components = {
     uSwiper: function() {
-      return __webpack_require__.e(/*! import() | components/u-swiper/u-swiper */ "components/u-swiper/u-swiper").then(__webpack_require__.bind(null, /*! @/components/u-swiper/u-swiper.vue */ 45))
+      return __webpack_require__.e(/*! import() | components/u-swiper/u-swiper */ "components/u-swiper/u-swiper").then(__webpack_require__.bind(null, /*! @/components/u-swiper/u-swiper.vue */ 49))
     },
     uTabControl: function() {
-      return __webpack_require__.e(/*! import() | components/u-tab-control/u-tab-control */ "components/u-tab-control/u-tab-control").then(__webpack_require__.bind(null, /*! @/components/u-tab-control/u-tab-control.vue */ 52))
+      return __webpack_require__.e(/*! import() | components/u-tab-control/u-tab-control */ "components/u-tab-control/u-tab-control").then(__webpack_require__.bind(null, /*! @/components/u-tab-control/u-tab-control.vue */ 56))
     },
     uGoods: function() {
-      return __webpack_require__.e(/*! import() | components/u-goods/u-goods */ "components/u-goods/u-goods").then(__webpack_require__.bind(null, /*! @/components/u-goods/u-goods.vue */ 59))
+      return __webpack_require__.e(/*! import() | components/u-goods/u-goods */ "components/u-goods/u-goods").then(__webpack_require__.bind(null, /*! @/components/u-goods/u-goods.vue */ 63))
     },
     uBackTop: function() {
-      return __webpack_require__.e(/*! import() | components/u-back-top/u-back-top */ "components/u-back-top/u-back-top").then(__webpack_require__.bind(null, /*! @/components/u-back-top/u-back-top.vue */ 66))
+      return __webpack_require__.e(/*! import() | components/u-back-top/u-back-top */ "components/u-back-top/u-back-top").then(__webpack_require__.bind(null, /*! @/components/u-back-top/u-back-top.vue */ 70))
     }
   }
 } catch (e) {
@@ -187,7 +187,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _home = __webpack_require__(/*! ../../service/home.js */ 17);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var uSwiper = function uSwiper() {__webpack_require__.e(/*! require.ensure | components/u-swiper/u-swiper */ "components/u-swiper/u-swiper").then((function () {return resolve(__webpack_require__(/*! ../../components/u-swiper/u-swiper.vue */ 45));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uRecommend = function uRecommend() {__webpack_require__.e(/*! require.ensure | pages/home/childCpns/u-recommend/u-recommend */ "pages/home/childCpns/u-recommend/u-recommend").then((function () {return resolve(__webpack_require__(/*! ./childCpns/u-recommend/u-recommend.vue */ 73));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uTabControl = function uTabControl() {__webpack_require__.e(/*! require.ensure | components/u-tab-control/u-tab-control */ "components/u-tab-control/u-tab-control").then((function () {return resolve(__webpack_require__(/*! ../../components/u-tab-control/u-tab-control.vue */ 52));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uGoods = function uGoods() {__webpack_require__.e(/*! require.ensure | components/u-goods/u-goods */ "components/u-goods/u-goods").then((function () {return resolve(__webpack_require__(/*! ../../components/u-goods/u-goods.vue */ 59));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uBackTop = function uBackTop() {__webpack_require__.e(/*! require.ensure | components/u-back-top/u-back-top */ "components/u-back-top/u-back-top").then((function () {return resolve(__webpack_require__(/*! ../../components/u-back-top/u-back-top.vue */ 66));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _home = __webpack_require__(/*! ../../service/home.js */ 17);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var uSwiper = function uSwiper() {__webpack_require__.e(/*! require.ensure | components/u-swiper/u-swiper */ "components/u-swiper/u-swiper").then((function () {return resolve(__webpack_require__(/*! ../../components/u-swiper/u-swiper.vue */ 49));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uRecommend = function uRecommend() {__webpack_require__.e(/*! require.ensure | pages/home/childCpns/u-recommend/u-recommend */ "pages/home/childCpns/u-recommend/u-recommend").then((function () {return resolve(__webpack_require__(/*! ./childCpns/u-recommend/u-recommend.vue */ 77));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uTabControl = function uTabControl() {__webpack_require__.e(/*! require.ensure | components/u-tab-control/u-tab-control */ "components/u-tab-control/u-tab-control").then((function () {return resolve(__webpack_require__(/*! ../../components/u-tab-control/u-tab-control.vue */ 56));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uGoods = function uGoods() {__webpack_require__.e(/*! require.ensure | components/u-goods/u-goods */ "components/u-goods/u-goods").then((function () {return resolve(__webpack_require__(/*! ../../components/u-goods/u-goods.vue */ 63));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uBackTop = function uBackTop() {__webpack_require__.e(/*! require.ensure | components/u-back-top/u-back-top */ "components/u-back-top/u-back-top").then((function () {return resolve(__webpack_require__(/*! ../../components/u-back-top/u-back-top.vue */ 70));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   data: function data() {
     return {
@@ -221,6 +221,7 @@ var _home = __webpack_require__(/*! ../../service/home.js */ 17);function _toCon
       (0, _home.getHomeData)().then(function (res) {
         // console.log(res);
         _this.banner = res.data.banner.list;
+        // console.log(this.banner)
         _this.recommend = res.data.recommend.list;
       });
     },
@@ -229,7 +230,7 @@ var _home = __webpack_require__(/*! ../../service/home.js */ 17);function _toCon
       (0, _home.getGoods)(type, page).then(function (res) {var _this2$goods$type$lis;
         (_this2$goods$type$lis = _this2.goods[type].list).push.apply(_this2$goods$type$lis, _toConsumableArray(res.data.list));
         _this2.goods[type].page = page;
-        console.log(_this2.goods[type].list);
+        // console.log(this.goods[type].list)
       });
     },
     titleClick: function titleClick(index) {

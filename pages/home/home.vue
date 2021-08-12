@@ -52,6 +52,7 @@
 				getHomeData().then(res=>{
 					// console.log(res);
 					this.banner = res.data.banner.list
+					// console.log(this.banner)
 					this.recommend = res.data.recommend.list
 				})
 			},
@@ -60,7 +61,7 @@
 				getGoods(type,page).then(res=>{
 					this.goods[type].list.push(...res.data.list)
 					this.goods[type].page = page
-					console.log(this.goods[type].list)
+					// console.log(this.goods[type].list)
 				})
 			},
 			titleClick(index){

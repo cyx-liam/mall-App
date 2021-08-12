@@ -1,0 +1,32 @@
+
+.detail{
+	padding-bottom:90rpx ;
+}
+.u-swiper .banner{
+	margin-top: 35px;
+}
+.statusBar {
+	position: fixed;
+
+
+
+
+	top: 0px;
+
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	z-index: 5;
+}
+.recommends {
+	font-size: 45rpx;
+	color: #787878;
+	padding: 20rpx 10rpx;
+}
+.nav {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+

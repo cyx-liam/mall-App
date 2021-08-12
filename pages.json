@@ -36,8 +36,11 @@
             "path" : "pages/detail/detail",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "详细页",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "商 品 详 情",
+				"navigationBarBackgroundColor":"#ff5777",
+                "enablePullDownRefresh": false,
+				// "navigationStyle":"custom",
+				"navigationBarTextStyle":"white"
             }
             
         }

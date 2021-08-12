@@ -1,6 +1,6 @@
 <template>
 	<view class="goodsItem" @click="itemClick">
-		<image class="showImg" :src="goodsItem.show.img" mode="widthFix"></image>
+		<image class="showImg" :src="img" mode="widthFix" @load="imgLoad"></image>
 		<view class="desc">
 			<view class="title">{{goodsItem.title}}</view>
 			<view class="info">
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+	import {debounce} from "../../utils/util.js"
 	export default {
 		name:"u-goods-item",
 		props: {
@@ -24,14 +25,26 @@
 		},
 		data() {
 			return {
-				
 			};
+		},
+		computed: {
+			img() {
+				return this.goodsItem.show?.img ??this.goodsItem.image  
+			}
 		},
 		methods: {
 			itemClick() {
-				uni.navigateTo({
-					url:"../../pages/detail/detail"
-				})
+				if(this.goodsItem.iid){
+					uni.navigateTo({
+						url:"../../pages/detail/detail?idd="+this.goodsItem.iid,
+					})
+				}
+				
+			},
+			imgLoad(){
+				let bus = ()=>uni.$emit("imgLoad")
+				debounce(bus,500)()
+				
 			}
 		},
 	}
@@ -68,6 +81,8 @@
 					margin-right: 10rpx;
 				}
 				.cfav  image{
+					position: relative;
+					top: 5rpx;
 					width: 30rpx;
 				}
 				

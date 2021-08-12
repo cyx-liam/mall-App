@@ -1,6 +1,5 @@
 .banner {
   width: 100%;
-  height: 400rpx;
 }
 .banner .banner-item image {
   width: 100%;
