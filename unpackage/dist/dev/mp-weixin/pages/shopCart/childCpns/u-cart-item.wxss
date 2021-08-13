@@ -1,0 +1,87 @@
+.cartItem.data-v-883dc4f2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 15rpx 0;
+  border-bottom: thin solid #dedede;
+}
+.cartItem .choice.data-v-883dc4f2 {
+  padding: 0 10rpx 0;
+}
+.cartItem .productImg image.data-v-883dc4f2 {
+  width: 200rpx;
+  height: 240rpx;
+  border-radius: 10rpx;
+}
+.cartItem .productInfo.data-v-883dc4f2 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  padding: 0 25rpx 0 10rpx;
+  color: #666;
+  overflow: hidden;
+}
+.cartItem .productInfo .title.data-v-883dc4f2 {
+  font-weight: bold;
+  font-size: 35rpx;
+  padding-bottom: 20rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cartItem .productInfo .desc.data-v-883dc4f2 {
+  font-size: 28rpx;
+  padding-bottom: 75rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cartItem .productInfo .price-count.data-v-883dc4f2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.cartItem .productInfo .price-count .price.data-v-883dc4f2 {
+  font-weight: bold;
+  font-size: 40rpx;
+  color: #ff5777;
+}
+.cartItem .productInfo .price-count .count.data-v-883dc4f2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border: thin solid #999;
+  width: 180rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  font-size: 35rpx;
+  line-height: 43rpx;
+}
+.cartItem .productInfo .price-count .count .show-count.data-v-883dc4f2 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: center;
+  border-left: thin solid #999;
+  border-right: thin solid #999;
+  margin: 4rpx 0;
+}
+.cartItem .productInfo .price-count .count .add.data-v-883dc4f2,
+.cartItem .productInfo .price-count .count .sub.data-v-883dc4f2 {
+  font-size: 40rpx;
+  width: 48rpx;
+  text-align: center;
+}
+

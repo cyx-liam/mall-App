@@ -1,6 +1,6 @@
 <template>
 	<view class="goodsItem" @click="itemClick">
-		<image class="showImg" :src="img" mode="widthFix" @load="imgLoad"></image>
+		<image class="showImg" :src="img" mode="widthFix"></image>
 		<view class="desc">
 			<view class="title">{{goodsItem.title}}</view>
 			<view class="info">
@@ -41,11 +41,6 @@
 				}
 				
 			},
-			imgLoad(){
-				let bus = ()=>uni.$emit("imgLoad")
-				debounce(bus,500)()
-				
-			}
 		},
 	}
 </script>

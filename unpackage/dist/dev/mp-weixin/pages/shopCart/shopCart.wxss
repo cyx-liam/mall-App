@@ -1,0 +1,5 @@
+.cart-list.data-v-300b9974 {
+  height: calc(100vh - 50px - 44px - 44px);
+  height: calc(100vh - 44px);
+}
+

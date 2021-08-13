@@ -1,0 +1,53 @@
+.buttom-bar.data-v-741ed7cc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  line-height: 44px;
+  background-color: #ececec;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+.buttom-bar .choise-all.data-v-741ed7cc {
+  margin: 0 25rpx 0 15rpx;
+  color: #666;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.buttom-bar .choise-all .icon.data-v-741ed7cc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-right: 5px;
+}
+.buttom-bar .btn.data-v-741ed7cc {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+  color: #fff;
+}
+.buttom-bar .btn .delect.data-v-741ed7cc {
+  padding: 0 25rpx;
+  background-color: #ffa200;
+  letter-spacing: 3rpx;
+}
+.buttom-bar .btn .calc.data-v-741ed7cc {
+  padding: 0 30rpx;
+  background-color: #ff5400;
+  letter-spacing: 5rpx;
+}
+

@@ -8,6 +8,10 @@ export function getHomeData(){
 }
 
 export function getGoods(type,page){
+	uni.showLoading({
+	    title: '加载中',
+		mask:true
+	});
 	return request2({
 		url:'/home/data',
 		methods:'GET',

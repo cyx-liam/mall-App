@@ -1,5 +1,8 @@
 {
   "navigationBarTitleText": "购 物 车",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "u-cart-info": "/pages/shopCart/childCpns/u-cart-item",
+    "u-buttom-bar": "/pages/shopCart/childCpns/u-bottom-bar"
+  }
 }

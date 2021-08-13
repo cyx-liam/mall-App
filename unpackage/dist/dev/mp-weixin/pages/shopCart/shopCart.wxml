@@ -1,1 +1,1 @@
-<view>shopCart</view>
+<view class="shop-cart data-v-300b9974"><scroll-view class="cart-list data-v-300b9974" scroll-y="{{true}}"><block wx:for="{{shooCartList}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><u-cart-info vue-id="{{'174cb680-1-'+__i0__}}" itemInfo="{{item}}" class="data-v-300b9974" bind:__l="__l"></u-cart-info></block></scroll-view><u-buttom-bar class="buttom-bar data-v-300b9974" vue-id="174cb680-2" bind:__l="__l"></u-buttom-bar></view>

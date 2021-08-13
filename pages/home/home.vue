@@ -54,14 +54,17 @@
 					this.banner = res.data.banner.list
 					// console.log(this.banner)
 					this.recommend = res.data.recommend.list
+					
 				})
 			},
 			_getGoods(type){
+				
 				let page = this.goods[type].page + 1
 				getGoods(type,page).then(res=>{
 					this.goods[type].list.push(...res.data.list)
 					this.goods[type].page = page
 					// console.log(this.goods[type].list)
+					uni.hideLoading();
 				})
 			},
 			titleClick(index){
