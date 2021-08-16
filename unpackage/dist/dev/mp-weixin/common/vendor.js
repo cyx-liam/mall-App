@@ -3254,7 +3254,7 @@ var index = {
 
 /***/ }),
 
-/***/ 163:
+/***/ 180:
 /*!*******************************************************************************!*\
   !*** D:/uni-app/mall-App/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \*******************************************************************************/
@@ -9513,6 +9513,48 @@ function request2(config) {
 
 /***/ }),
 
+/***/ 29:
+/*!***********************************************!*\
+  !*** D:/uni-app/mall-App/service/category.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.getCategory = getCategory;exports.getCategoryData = getCategoryData;exports.getCategoryDetail = getCategoryDetail;var _request = __webpack_require__(/*! ./request.js */ 20);
+
+function getCategory() {
+  return (0, _request.request2)({
+    url: '/category' });
+
+}
+
+function getCategoryData(maitKey) {
+  uni.showLoading({
+    title: '加载中',
+    mask: true });
+
+  return (0, _request.request2)({
+    url: '/subcategory',
+    data: {
+      maitKey: maitKey } });
+
+
+}
+
+function getCategoryDetail(miniWallkey) {
+  return (0, _request.request2)({
+    url: '//subcategory/detail',
+    data: {
+      miniWallkey: miniWallkey,
+      type: 'sell' } });
+
+
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
 /***/ 3:
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -9555,7 +9597,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 49:
+/***/ 52:
 /*!*****************************************!*\
   !*** D:/uni-app/mall-App/utils/util.js ***!
   \*****************************************/
@@ -9600,7 +9642,7 @@ function padLeftZero(str) {
 
 /***/ }),
 
-/***/ 50:
+/***/ 53:
 /*!*********************************************!*\
   !*** D:/uni-app/mall-App/service/detail.js ***!
   \*********************************************/

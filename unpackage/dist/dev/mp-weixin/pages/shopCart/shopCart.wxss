@@ -2,4 +2,18 @@
   height: calc(100vh - 50px - 44px - 44px);
   height: calc(100vh - 44px);
 }
+.not-cart.data-v-300b9974 {
+  width: 500rpx;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -250rpx;
+  margin-top: -100rpx;
+}
+.not-cart text.data-v-300b9974 {
+  color: #828282;
+  font-size: 50rpx;
+  font-weight: bold;
+}
 

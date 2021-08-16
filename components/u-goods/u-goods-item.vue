@@ -29,7 +29,7 @@
 		},
 		computed: {
 			img() {
-				return this.goodsItem.show?.img ??this.goodsItem.image  
+				return this.goodsItem.show?.img ?? this.goodsItem.image ?? this.goodsItem.img
 			}
 		},
 		methods: {

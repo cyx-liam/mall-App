@@ -1,0 +1,25 @@
+
+.data-v-2e0379fd ::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.category-menu.data-v-2e0379fd {
+  height: calc(100vh - 50px - 44px);
+  height: 100vh;
+  width: 210rpx;
+  background-color: #f1f1f1;
+  color: #666;
+}
+.category-menu .menu-item.data-v-2e0379fd {
+  line-height: 100rpx;
+  text-align: center;
+  letter-spacing: 5rpx;
+}
+.activeTitle.data-v-2e0379fd {
+  background-color: #fff;
+  color: #ff5777;
+  font-weight: bold;
+  border-left: 6rpx solid #ff5777;
+}
+

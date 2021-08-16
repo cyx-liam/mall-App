@@ -1,5 +1,10 @@
 {
   "navigationBarTitleText": "商 品 分 类",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "u-goods": "/components/u-goods/u-goods",
+    "u-category-menu": "/pages/category/childCpns/u-category-menu",
+    "u-category-data": "/pages/category/childCpns/u-category-data",
+    "ugoods": "/components/u-goods/u-goods"
+  }
 }

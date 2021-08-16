@@ -25,8 +25,7 @@
 		},
 		methods: {
 			imgLoad() {
-				let bus = ()=>uni.$emit("imgLoad")
-				debounce(bus,500)()
+				this.$emit('imgLoad')
 			}
 		},
 	}

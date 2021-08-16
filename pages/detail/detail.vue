@@ -4,7 +4,7 @@
 		<u-swiper sheight="800rpx" marginTop="35px" class="u-swiper" :banner="banner"></u-swiper>
 		<u-base-info  :baseInfo="baseInfo"></u-base-info>
 		<u-shop-info :shopInfo="shopInfo"></u-shop-info>
-		<u-detail-info :detailInfo="datilInfo"></u-detail-info>
+		<u-detail-info :detailInfo="datilInfo" @imgLoad='imgLoad'></u-detail-info>
 		<u-param-info class="param" :paramInfo='paramInfo'></u-param-info>
 		<u-comment-info class="comment" :commentInfo="commentInfo"></u-comment-info>
 		<view class="recommends">商品推荐</view>
@@ -77,37 +77,19 @@
 					},
 				],
 				scrollTops:[],
-				currIndex:0
+				currIndex:0,
+				detailImgLength:0,
+				imgLoadCount:0
 			}
 			
 		},
 		onLoad(e) {
+			uni.showLoading({
+				mask:true,
+			    title: '加载中'
+			});
 			this._getDateil(e.idd)
 			this._getRecommends()
-			// let d = debounce()
-			uni.$on("imgLoad",()=>{
-				uni.pageScrollTo({
-					scrollTop:0,
-					duration:0,
-				})
-				const query = uni.createSelectorQuery()
-				this.scrollTops[0] = 0
-				
-				query.select(".param").boundingClientRect(data=>{
-					this.scrollTops[1] = data.top-30
-				}).exec()
-				query.select(".comment").boundingClientRect(data=>{
-					this.scrollTops[2] = data.top-30
-				}).exec()
-				query.select(".recommends").boundingClientRect(data=>{
-					this.scrollTops[3] = data.top-30
-				}).exec()
-				
-				this.scrollTops[4] = Number.MAX_VALUE
-				
-				console.log(this.scrollTops);
-				
-			})
 		},
 		onPageScroll(e) {
 			let top = e.scrollTop
@@ -140,7 +122,11 @@
 					if (data.rate && data.rate.cRate > 0) {
 						this.commentInfo = data.rate.list[0]
 					}
-					// console.log(data);
+					console.log(this.datilInfo);
+					this.detailImgLength = this.datilInfo.detailImage.reduce((p,item)=>{
+						return p + item.list.length
+					},0)
+					console.log(this.detailImgLength);
 				})
 			},
 			_getRecommends() {
@@ -171,9 +157,36 @@
 				shopInfo.desc = this.datilInfo.desc
 				shopInfo.price = this.baseInfo.realPrice
 				// console.log(shopInfo);
-				
 				this.$store.dispatch("addCart",shopInfo)
+			},
+			imgLoad(){
+				// console.log('aad');
+				this.imgLoadCount ++ 
+				if(this.imgLoadCount == this.detailImgLength){
+					console.log(this.imgLoadCount);
+					uni.pageScrollTo({
+						scrollTop:0,
+						duration:0,
+					})
+					const query = uni.createSelectorQuery()
+					this.scrollTops[0] = 0
+					
+					query.select(".param").boundingClientRect(data=>{
+						this.scrollTops[1] = data.top-30
+					}).exec()
+					query.select(".comment").boundingClientRect(data=>{
+						this.scrollTops[2] = data.top-30
+					}).exec()
+					query.select(".recommends").boundingClientRect(data=>{
+						this.scrollTops[3] = data.top-30
+					}).exec()
+					
+					this.scrollTops[4] = Number.MAX_VALUE
+					console.log(this.scrollTops);
+					uni.hideLoading();
+				}
 			}
+			
 		},
 	}
 </script>
