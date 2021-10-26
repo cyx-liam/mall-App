@@ -4,11 +4,8 @@
   font-size: 28rpx;
 }
 .category-data .data.data-v-86b99270 {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .category-data .data .data-item1.data-v-86b99270 {
   width: calc(100% / 3);

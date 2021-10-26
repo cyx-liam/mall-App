@@ -21,7 +21,7 @@ export function getCategoryData(maitKey){
 
 export function getCategoryDetail(miniWallkey){
 	return request2({
-		url:'//subcategory/detail',
+		url:'/subcategory/detail',
 		data:{
 			miniWallkey,
 			type:'sell'

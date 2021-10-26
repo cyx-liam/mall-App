@@ -10,7 +10,7 @@
 			<view class="title">{{itemInfo.title}}</view>
 			<view class="desc">{{itemInfo.desc}}</view>
 			<view class="price-count">
-				<view class="price">￥{{itemInfo.price}}</view>
+				<view class="price">￥{{itemInfo.price * itemInfo.count}}</view>
 				<view class="count">
 					<view class="sub" @click="sub">-</view>
 					<view class="show-count">{{itemInfo.count}}</view>

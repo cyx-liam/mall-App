@@ -1,5 +1,9 @@
 {
   "navigationBarTitleText": "我 的",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "u-header": "/pages/profile/childCpns/u-header",
+    "u-info": "/pages/profile/childCpns/u-info",
+    "u-list": "/pages/profile/childCpns/u-list"
+  }
 }

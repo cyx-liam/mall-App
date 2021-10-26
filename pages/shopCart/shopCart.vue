@@ -1,7 +1,7 @@
 <template>
 	<view class="shop-cart">
-		<scroll-view scroll-y class="cart-list" v-if="this.$store.state.cartList.length">
-			<u-cart-info v-for="item in shooCartList" :key='item.id' :itemInfo="item"></u-cart-info>
+		<scroll-view scroll-y class="cart-list" v-if="shopCartList.length">
+			<u-cart-info v-for="item in shopCartList" :key='item.id' :itemInfo="item"></u-cart-info>
 		</scroll-view>
 		<view class="not-cart" v-else>
 			<text>购物车暂无商品</text>
@@ -30,7 +30,7 @@
 			uButtomBar
 		},
 		computed: {
-			shooCartList() {
+			shopCartList() {
 				return this.$store.state.cartList 
 			}
 		},

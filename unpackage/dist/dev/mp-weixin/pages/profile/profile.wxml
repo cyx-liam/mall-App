@@ -1,1 +1,1 @@
-<view>profile</view>
+<view class="profile"><u-header vue-id="23b2e5ec-1" bind:__l="__l"></u-header><u-info vue-id="23b2e5ec-2" bind:__l="__l"></u-info><u-list vue-id="23b2e5ec-3" list="{{infoList}}" bind:__l="__l"></u-list><u-list vue-id="23b2e5ec-4" list="{{serveList}}" bind:__l="__l"></u-list></view>

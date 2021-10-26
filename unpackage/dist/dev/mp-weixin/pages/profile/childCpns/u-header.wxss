@@ -1,0 +1,37 @@
+.header.data-v-7fac7505 {
+  background-color: #ff5777;
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0 30rpx 30rpx;
+}
+.header .head.data-v-7fac7505 {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 150rpx;
+}
+.header .head image.data-v-7fac7505 {
+  width: 100%;
+}
+.header .login.data-v-7fac7505 {
+  flex: 1;
+  color: #fff;
+  padding-left: 20rpx;
+}
+.header .login .login-reg.data-v-7fac7505 {
+  font-size: 40rpx;
+  padding: 0 0 15rpx 10rpx;
+}
+.header .login .phone.data-v-7fac7505 {
+  display: flex;
+  align-items: center;
+}
+.header .login .phone image.data-v-7fac7505 {
+  width: 40rpx;
+}
+.header .right.data-v-7fac7505 {
+  width: 80rpx;
+}
+.header .right image.data-v-7fac7505 {
+  width: 90%;
+}
+

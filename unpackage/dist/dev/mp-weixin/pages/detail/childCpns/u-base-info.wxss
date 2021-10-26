@@ -29,26 +29,16 @@
   bottom: 12rpx;
 }
 .base-info .sell-info.data-v-6924c2a8 {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
+  justify-content: space-between;
   font-size: 28rpx;
   padding-bottom: 20rpx;
   border-bottom: 1px solid #ccc;
 }
 .base-info .service.data-v-6924c2a8 {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 20rpx 0 40rpx;
 }
 .base-info .service .service-item image.data-v-6924c2a8 {
