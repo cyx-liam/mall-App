@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uCartInfo = function uCartInfo() {__webpack_require__.e(/*! require.ensure | pages/shopCart/childCpns/u-cart-item */ "pages/shopCart/childCpns/u-cart-item").then((function () {return resolve(__webpack_require__(/*! ./childCpns/u-cart-item.vue */ 111));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uButtomBar = function uButtomBar() {__webpack_require__.e(/*! require.ensure | pages/shopCart/childCpns/u-bottom-bar */ "pages/shopCart/childCpns/u-bottom-bar").then((function () {return resolve(__webpack_require__(/*! ./childCpns/u-bottom-bar.vue */ 118));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uCartInfo = function uCartInfo() {__webpack_require__.e(/*! require.ensure | pages/shopCart/childCpns/u-cart-item */ "pages/shopCart/childCpns/u-cart-item").then((function () {return resolve(__webpack_require__(/*! ./childCpns/u-cart-item.vue */ 114));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uButtomBar = function uButtomBar() {__webpack_require__.e(/*! require.ensure | pages/shopCart/childCpns/u-bottom-bar */ "pages/shopCart/childCpns/u-bottom-bar").then((function () {return resolve(__webpack_require__(/*! ./childCpns/u-bottom-bar.vue */ 121));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

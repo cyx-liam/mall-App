@@ -48,7 +48,6 @@
 <style lang="less">
 	.goodsItem{
 		width: 100%;
-		position: relative;
 		padding-bottom: 80rpx;
 		
 		.showImg{
@@ -79,6 +78,7 @@
 					position: relative;
 					top: 5rpx;
 					width: 30rpx;
+					height: 30rpx;
 				}
 				
 			}

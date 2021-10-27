@@ -18,10 +18,12 @@ const store = new Vuex.Store({
 			})
 		},
 		addCartCount(state,payload){
-			payload.count++
+			let cartItem = state.cartList.find((item)=>item.id == payload.id)
+			cartItem.count++
 		},
 		subCartCount(state,payload){
-			payload.count--
+			let cartItem = state.cartList.find((item)=>item.id == payload.id)
+			cartItem.count--
 		},
 		addToCart(state,payload){
 			state.cartList.push(payload)
@@ -30,7 +32,6 @@ const store = new Vuex.Store({
 			while(state.cartList.find(item=>item.choice)){
 				for (let i = 0; i < state.cartList.length; i++) {
 					if(state.cartList[i].choice){
-						console.log(i);
 						state.cartList.splice(i,1)
 						break;
 					}
@@ -56,6 +57,7 @@ const store = new Vuex.Store({
 				commit('addToCart',payload)
 			}else{
 				uni.showToast({
+					icon:"error",
 				    title: '已添加购物车',
 				    duration: 1500
 				});

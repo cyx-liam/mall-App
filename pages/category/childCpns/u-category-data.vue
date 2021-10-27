@@ -59,6 +59,7 @@
 	.imageStyle(){
 		width: 90%;
 		margin:30rpx 0 10rpx;
+		height: 100rpx;
 	}
 	
 	.category-data{

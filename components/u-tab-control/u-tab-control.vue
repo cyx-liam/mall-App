@@ -31,7 +31,7 @@
 <style lang="less">
 	.titles{
 		display: flex;
-		line-height: 88rpx;
+		line-height: 75rpx;
 		background-color: #fff;
 		.titles-item{
 			flex: 1;

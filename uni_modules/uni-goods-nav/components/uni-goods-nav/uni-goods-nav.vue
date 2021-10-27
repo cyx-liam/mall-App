@@ -45,6 +45,9 @@
 				type: Array,
 				default () {
 					return [{
+						icon: 'headphones',
+						text: '客服'
+					},{
 						icon: 'shop',
 						text: '店铺',
 					}, {
@@ -61,11 +64,6 @@
 							backgroundColor: '#ffa200',
 							color: '#fff'
 						},
-						{
-							text: '立即购买',
-							backgroundColor: '#ff0000',
-							color: '#fff'
-						}
 					]
 				}
 			},
@@ -103,7 +101,7 @@
 	}
 
 	.uni-goods-nav {
-		box-shadow: 0 -1rpx 3rpx #ccc ;
+		box-shadow: 0 -1rpx 10rpx #ccc ;
 		/* #ifndef APP-NVUE */
 		display: flex;
 		/* #endif */

@@ -14,6 +14,7 @@
 .category-data .data .data-item1 image.data-v-86b99270 {
   width: 90%;
   margin: 30rpx 0 10rpx;
+  height: 100rpx;
 }
 .category-data .data .data-item2.data-v-86b99270 {
   width: calc(100% / 4);
@@ -22,6 +23,7 @@
 .category-data .data .data-item2 image.data-v-86b99270 {
   width: 90%;
   margin: 30rpx 0 10rpx;
+  height: 100rpx;
 }
 .category-data .data .data-item3.data-v-86b99270 {
   width: calc(100% / 6);
@@ -30,6 +32,7 @@
 .category-data .data .data-item3 image.data-v-86b99270 {
   width: 90%;
   margin: 30rpx 0 10rpx;
+  height: 100rpx;
 }
 .category-data .data .data-item4.data-v-86b99270 {
   width: calc(100% / 8);
@@ -38,5 +41,6 @@
 .category-data .data .data-item4 image.data-v-86b99270 {
   width: 90%;
   margin: 30rpx 0 10rpx;
+  height: 100rpx;
 }
 

@@ -1,23 +1,19 @@
 
-.data-v-682a9774 ::-webkit-scrollbar {
+ ::-webkit-scrollbar {
   display: none;
   width: 0;
   height: 0;
 }
-.catagory.data-v-682a9774 {
+.catagory {
   display: flex;
 }
-.category-content.data-v-682a9774 {
+.content-page {
   flex: 1;
+  position: relative;
   height: calc(100vh - 50px - 44px);
   height: 100vh;
 }
-.category-content .recommend.data-v-682a9774 {
-  font-size: 45rpx;
-  font-weight: bold;
-  padding: 5rpx 20rpx;
-  margin: 40rpx 0 15rpx;
-  background-color: #ff5a7e;
-  color: #fff;
+.active {
+  z-index: 5;
 }
 

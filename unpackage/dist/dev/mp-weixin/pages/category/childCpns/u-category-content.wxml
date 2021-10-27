@@ -1,0 +1,1 @@
+<scroll-view class="{{['category-content',(index==currIndex)?'active':'']}}" scroll-y="{{true}}"><block wx:if="{{dataList}}"><u-category-data vue-id="7e1dd1ca-1" categoryData="{{dataList}}" bind:__l="__l"></u-category-data></block><view class="recommend">热销推荐</view><u-goods vue-id="7e1dd1ca-2" goods="{{recommendList}}" bind:__l="__l"></u-goods></scroll-view>

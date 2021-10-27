@@ -1,33 +1,36 @@
 <template>
 	<view class="catagory">
 		<u-category-menu @menuClick='menuClick' :categoryList="categoryList"></u-category-menu>
-		<scroll-view scroll-y class="category-content">
+		<!-- <scroll-view scroll-y class="category-content">
 			<u-category-data v-if="dataList" :categoryData="dataList"></u-category-data>
 			<view class="recommend">热销推荐</view>
 			<u-goods :goods='recommendList'></u-goods>
-		</scroll-view>
+		</scroll-view> -->
+		<view class="content-page">
+			<view v-for="(item,index) in categoryData" :key="index">
+				<u-category-content v-if="currIndex!=-1" :index="index" :currIndex="currIndex"  :dataList="item.data" :recommendList="item.recommend"/>
+			</view >
+		</view>
 		
 	</view>
 </template>
 
 <script>
 	import uCategoryMenu from "./childCpns/u-category-menu.vue"
-	import uCategoryData from "./childCpns/u-category-data.vue"
-	import ugoods from "@/components/u-goods/u-goods.vue"
+	import uCategoryContent from "./childCpns/u-category-content.vue"
 	
 	import {getCategory,getCategoryData,getCategoryDetail} from "../../service/category.js"
 	export default {
 		data() {
 			return {
 				categoryList:[],
-				categoryData:{},
+				categoryData:[],
 				currIndex:-1
 			}
 		},
 		components: {
 			uCategoryMenu,
-			uCategoryData,
-			ugoods
+			uCategoryContent,
 		},
 		created() {
 			this._getCategory()
@@ -43,6 +46,7 @@
 							data:[],
 							recommend:[]
 						}
+						// this._getContent(i)
 					}
 					
 					// this._getCategoryData(0)
@@ -69,50 +73,20 @@
 					uni.hideLoading()
 				})
 			},
-			// _getCategoryData(index){
-			// 	getCategoryData(this.categoryList[index].maitKey).then(res=>{
-			// 		// console.log(res.data.list);
-			// 		this.categoryData[index].data=res.data.list
-			// 		this._getCategoryDetail(index)
-					
-			// 	})
-				
-			// },
-			// _getCategoryDetail(index){
-			// 	getCategoryDetail(this.categoryList[index].miniWallkey).then(res=>{
-			// 		// console.log(res);
-			// 		this.currIndex = index
-			// 		this.categoryData[index].recommend=res
-			// 		uni.hideLoading()
-			// 	})
-			// },
 			// 事件
 			menuClick(index){
-				if(!this.categoryData[index].data.length){
+				if(!this.categoryData[index].data.length && !this.categoryData[index].recommend.length){
 					this._getContent(index)
+					// this.currIndex = index
 				}else{
 					this.currIndex = index
 				}
 			}
 		},
-		computed: {
-			dataList() {
-				if(this.currIndex == -1){
-					return []
-				}
-				return this.categoryData[this.currIndex].data 
-			},
-			recommendList(){
-				if(this.currIndex == -1){
-					return []
-				}
-				return this.categoryData[this.currIndex].recommend
-			}
-		},
 	}
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 	/deep/::-webkit-scrollbar {
 		display: none;
 		width: 0;
@@ -120,21 +94,17 @@
 	}
 	.catagory{
 		display: flex;
+		
 	}
-	.category-content {
+	.content-page {
 		flex: 1;
-		// border: 1px solid #000;
+		position: relative;
 		height: calc(100vh - 50px - 44px);
 		/* #ifndef H5 */
 		height: 100vh;
 		/* #endif */
-		.recommend{
-			font-size: 45rpx;
-			font-weight: bold;
-			padding: 5rpx 20rpx;
-			margin: 40rpx 0 15rpx;
-			background-color: #ff5a7e;
-			color: #fff;
-		}
+	}
+	.active{
+		z-index: 5;
 	}
 </style>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "u-goods": "/components/u-goods/u-goods",
+    "u-category-data": "/pages/category/childCpns/u-category-data",
+    "ugoods": "/components/u-goods/u-goods"
+  }
+}

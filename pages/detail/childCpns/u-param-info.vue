@@ -41,8 +41,8 @@
 			display: flex;
 			border-bottom: 1rpx #ececec solid;
 			.key{
-				
-				margin-right: 100rpx;
+				// border: 1rpx solid #000;
+				width: 200rpx;
 				white-space: nowrap;
 			}
 			.value{

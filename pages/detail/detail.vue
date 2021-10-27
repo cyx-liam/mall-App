@@ -8,8 +8,8 @@
 		<u-param-info class="param" :paramInfo='paramInfo'></u-param-info>
 		<u-comment-info class="comment" :commentInfo="commentInfo"></u-comment-info>
 		<view class="recommends">商品推荐</view>
-		<u-goods :goods="goods"></u-goods>
-		<goods-nav :options="options" :fill="true" @buttonClick="buttonClick" class="nav"></goods-nav>
+		<u-goods class='goods' :goods="goods"></u-goods>
+		<goods-nav  :fill="true" @buttonClick="buttonClick" class="nav"></goods-nav>
 	</view>
 </template>
 
@@ -25,7 +25,7 @@
 
 	import goodsNav from "../../uni_modules/uni-goods-nav/components/uni-goods-nav/uni-goods-nav.vue"
 	
-	import {debounce} from "../../utils/util.js"
+	import {debounce,calcTop} from "../../utils/util.js"
 	import {
 		getDateil,
 		GoodsBaseInfo,
@@ -55,27 +55,6 @@
 				paramInfo: {},
 				commentInfo: {},
 				goods: [],
-				options: [{
-					icon: 'headphones',
-					text: '客服'
-				}, {
-					icon: 'shop',
-					text: '店铺',
-				}, {
-					icon: 'star',
-					text: '收藏',
-				}],
-				buttonGroup: [{
-						text: '加入购物车',
-						backgroundColor: '#ff0000',
-						color: '#fff'
-					},
-					{
-						text: '立即购买',
-						backgroundColor: '#ffa200',
-						color: '#fff'
-					},
-				],
 				scrollTops:[],
 				currIndex:0,
 				detailImgLength:0,
@@ -84,10 +63,6 @@
 			
 		},
 		onLoad(e) {
-			uni.showLoading({
-				mask:true,
-			    title: '加载中'
-			});
 			this._getDateil(e.idd)
 			this._getRecommends()
 		},
@@ -100,6 +75,11 @@
 					break;
 				}
 			}
+			// const query = uni.createSelectorQuery()
+			// query.select(".param").boundingClientRect()
+			// query.selectViewport().scrollOffset().exec(res=>{
+				// console.log(res[0].top + res[1].scrollTop)
+			// })
 			
 		},
 		onReady() {
@@ -109,39 +89,37 @@
 			
 		},
 		methods: {
-			_getDateil(idd) {
+			async _getDateil(idd) {
 				this.idd = idd
-				getDateil(idd).then(res => {
+				let res = await getDateil(idd)
 					// console.log(res.result);
-					let data = res.result
-					this.banner = data.itemInfo.topImages
-					this.baseInfo = new GoodsBaseInfo(data.itemInfo, data.columns, data.shopInfo.services)
-					this.shopInfo = new ShopInfo(data.shopInfo)
-					this.datilInfo = data.detailInfo;
-					this.paramInfo = new ParamInfo(data.itemParams.info, data.itemParams.rule)
-					if (data.rate && data.rate.cRate > 0) {
-						this.commentInfo = data.rate.list[0]
-					}
-					console.log(this.datilInfo);
-					this.detailImgLength = this.datilInfo.detailImage.reduce((p,item)=>{
-						return p + item.list.length
-					},0)
-					console.log(this.detailImgLength);
-				})
+				let data = res.result
+				this.banner = data.itemInfo.topImages
+				this.baseInfo = new GoodsBaseInfo(data.itemInfo, data.columns, data.shopInfo.services)
+				this.shopInfo = new ShopInfo(data.shopInfo)
+				this.datilInfo = data.detailInfo;
+				this.paramInfo = new ParamInfo(data.itemParams.info, data.itemParams.rule)
+				if (data.rate && data.rate.cRate > 0) {
+					this.commentInfo = data.rate.list[0]
+				}
+				uni.hideLoading();
+				// console.log(this.datilInfo);
 			},
-			_getRecommends() {
-				getRecommends().then(res => {
-
-					this.goods.push(...res.data.list)
-					// console.log(this.goods);
-				})
+			async _getRecommends() {
+				let res = await getRecommends()
+				this.goods.push(...res.data.list)
+				uni.hideLoading();
+				// console.log(this.goods);
 			},
 			titleClick(index){
 				// console.log(this.scrollTops[index]);
-				uni.pageScrollTo({
-					scrollTop:this.scrollTops[index]+1,
-					duration:200,
-				})
+				// this.$nextTick(function(){
+					uni.pageScrollTo({
+						scrollTop:this.scrollTops[index]+1,
+						duration:200,
+					})
+				// })	
+				
 				
 			},
 			buttonClick(e){
@@ -159,32 +137,16 @@
 				// console.log(shopInfo);
 				this.$store.dispatch("addCart",shopInfo)
 			},
-			imgLoad(){
+			async imgLoad(){
 				// console.log('aad');
-				this.imgLoadCount ++ 
-				if(this.imgLoadCount == this.detailImgLength){
-					console.log(this.imgLoadCount);
-					uni.pageScrollTo({
-						scrollTop:0,
-						duration:0,
-					})
-					const query = uni.createSelectorQuery()
-					this.scrollTops[0] = 0
-					
-					query.select(".param").boundingClientRect(data=>{
-						this.scrollTops[1] = data.top-30
-					}).exec()
-					query.select(".comment").boundingClientRect(data=>{
-						this.scrollTops[2] = data.top-30
-					}).exec()
-					query.select(".recommends").boundingClientRect(data=>{
-						this.scrollTops[3] = data.top-30
-					}).exec()
-					
-					this.scrollTops[4] = Number.MAX_VALUE
-					console.log(this.scrollTops);
-					uni.hideLoading();
-				}
+				this.scrollTops[0] = 0
+				this.scrollTops[1] =await calcTop(".param") - 35
+				this.scrollTops[2] =await calcTop(".comment") - 35
+				this.scrollTops[3] =await calcTop(".recommends") - 35
+				this.scrollTops[4] = Number.MAX_VALUE
+				// console.log(this.scrollTops);
+				// uni.hideLoading();
+				
 			}
 			
 		}
@@ -216,6 +178,7 @@
 		font-size: 45rpx;
 		color: #787878;
 		padding: 20rpx 10rpx;
+		font-weight: bold;
 	}
 
 	.nav {

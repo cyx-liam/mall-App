@@ -40,7 +40,7 @@
 		z-index: 5;
 		display: flex;
 		line-height: 35px;
-		border-bottom: thin solid #dddddd;
+		box-shadow: 0 2rpx 15rpx #ccc;
 		.left image {
 			margin-top: 20rpx;
 			width: 40rpx;

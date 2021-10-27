@@ -54,7 +54,7 @@
 					this.banner = res.data.banner.list
 					// console.log(this.banner)
 					this.recommend = res.data.recommend.list
-					
+					uni.hideLoading();
 				})
 			},
 			_getGoods(type){

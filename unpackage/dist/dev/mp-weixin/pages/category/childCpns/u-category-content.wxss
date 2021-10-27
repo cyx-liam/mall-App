@@ -1,0 +1,17 @@
+.category-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.category-content .recommend {
+  font-size: 45rpx;
+  font-weight: bold;
+  padding: 5rpx 20rpx;
+  margin: 40rpx 0 15rpx;
+  background-color: #ff5a7e;
+  color: #fff;
+}
+

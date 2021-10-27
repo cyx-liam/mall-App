@@ -7,10 +7,6 @@ export function getCategory(){
 }
 
 export function getCategoryData(maitKey){
-	uni.showLoading({
-	    title: '加载中',
-		mask:true
-	});
 	return request2({
 		url:'/subcategory',
 		data:{

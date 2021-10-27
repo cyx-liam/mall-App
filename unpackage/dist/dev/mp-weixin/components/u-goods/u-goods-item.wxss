@@ -1,6 +1,5 @@
 .goodsItem {
   width: 100%;
-  position: relative;
   padding-bottom: 80rpx;
 }
 .goodsItem .showImg {
@@ -33,5 +32,6 @@
   position: relative;
   top: 5rpx;
   width: 30rpx;
+  height: 30rpx;
 }
 

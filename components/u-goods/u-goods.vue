@@ -25,10 +25,12 @@
 <style lang="less">
 	.goods{
 		display: flex;
+		
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		margin-top: 10rpx;
 		.item{
+			position: relative;
 			margin-bottom: 20rpx;
 			width: 48%;
 		}

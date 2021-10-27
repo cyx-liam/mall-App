@@ -1,4 +1,8 @@
 function baseRequest(baseUrl,config){
+	uni.showLoading({
+		mask:true,
+	    title: '加载中'
+	});
 	return new Promise((resole,reject)=>{
 		uni.request({
 			url:baseUrl+config.url,

@@ -29,7 +29,7 @@
   flex-direction: row;
 }
 .uni-goods-nav.data-v-279c619b {
-  box-shadow: 0 -1rpx 3rpx #ccc;
+  box-shadow: 0 -1rpx 10rpx #ccc;
   display: flex;
   flex: 1;
   flex-direction: row;
