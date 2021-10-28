@@ -75,12 +75,6 @@
 					break;
 				}
 			}
-			// const query = uni.createSelectorQuery()
-			// query.select(".param").boundingClientRect()
-			// query.selectViewport().scrollOffset().exec(res=>{
-				// console.log(res[0].top + res[1].scrollTop)
-			// })
-			
 		},
 		onReady() {
 			
@@ -112,15 +106,12 @@
 				// console.log(this.goods);
 			},
 			titleClick(index){
-				// console.log(this.scrollTops[index]);
-				// this.$nextTick(function(){
+				this.$nextTick(function(){
 					uni.pageScrollTo({
 						scrollTop:this.scrollTops[index]+1,
 						duration:200,
 					})
-				// })	
-				
-				
+				})	
 			},
 			buttonClick(e){
 				if(e.index == 0){
