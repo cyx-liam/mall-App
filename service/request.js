@@ -21,5 +21,5 @@ export function request1(config){
 }
 
 export function request2(config){
-	return baseRequest('http://152.136.185.210:8000/api/w6',config)
+	return baseRequest('http://152.136.185.210:7878/api/hy66',config)
 }
